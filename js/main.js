@@ -8,7 +8,8 @@
   //find btn element by ID with js
   let theButton = document.querySelector("#myButton"),
       theHeading = document.querySelector('h1'),
-      svgImage = document.querySelector("#svgGraphic");
+      allSVGs = document.querySelectorAll(".svg");
+
 
 
 //*****FUNCTIONS******
@@ -24,6 +25,8 @@
 
 //*****EVENT_LISTENERS******
   theButton.addEventListener("click",changeText);
-  svgImage.addEventListener("mouseover", logSVG)
+  //svgImage.addEventListener("click", logSVG);
+  //svgImage2.addEventListener("click", logSVG);
 
+  allSVGs.forEach(item => item.addEventListener('click', logSVG));
 })();
